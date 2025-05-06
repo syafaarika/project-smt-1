@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary_color: rgb(255, 107, 1);
+    --primary_color_dark: rgb(139, 68, 5);
+    --text_dark: rgb(112, 61, 13);
+    --text_light: rgb(216, 183, 145);
+    --extra_light: rgb(249, 218, 190);
+    --max_width: 1200px;
+    --width: 1rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box 0;
+
+}
+
+.section_container {
+    max-width: var(--max_width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section_header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text_dark);
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right,
+            #945f18,
+            #f4c08b);
+}
+
+.background_container {
+    max-width: var(--max_width);
+    background-color: white;
+    margin: auto;
+    border-radius: 5%;
+    padding: 4rem;
+   
+}
+
+
+
+nav {
+    max-width: var(--max_width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.nav_logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text_dark);
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary_color);
+    padding: 1rem 0.5rem;
+    position: relative;
+    transition: transform 0.3s;
+
+
+}
+
+nav a:hover {
+    background-color: rgb(237, 201, 138);
+    padding: 1rem 0.5rem;
+    transition: all 0.3s;
+
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    background-color: rgb(255, 128, 9);
+    width: 100%;
+    height: 2px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: all 0.3s;
+    transform: scaleX(0);
+}
+
+nav a:hover::after {
+    transform: scale(1);
+}
+
+.header_container {
+    padding: 1rem 1rem 5rem 1rem;
+}
+
+.header_image_container {
+    position: relative;
+    min-height: 500px;
+    background-image: linear-gradient(to right,
+            rgba(220, 173, 92, 0.664),
+            rgba(190, 163, 104, 0)),
+        url("header.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    max-width: var(--max_width);
+    margin: auto;
+}
+
+.header_content {
+    max-width: 600px;
+    padding: 5rem 2rem;
+    color: white;
+}
+
+.header_content h1 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.header_content p {
+    color: var(--extra_light);
+}
+
+.kerajaan_grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: var(--max_width);
+    background: white;
+    margin: auto;
+    border-radius: 5%;
+    position: relative;
+    
+}
+
+.kerajaan_grid a {
+    text-decoration: none;
+    color: black;
+}
+
+.kerajaan_img_kartu img {
+    height: 250px;
+    
+}
+
+
+.kerajaan_kartu {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(220, 173, 92, 0.664);
+    background: linear-gradient(to right,
+            rgb(208, 230, 236),
+            rgb(255, 228, 121));
+    transition: transform 0.32s, 0.3s;
+    height: 350px;
+    margin: auto;
+    max-width: var(--max_width);
+}
+
+.kerajaan_kartu:hover {
+    background: linear-gradient(to left,
+            rgb(208, 230, 236),
+            rgb(255, 228, 121));
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px rgb(255, 228, 121);
+}
+
+.kerajaan_content {
+    padding: 1rem;
+}
+
+.kerajaan_kartu_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.kerajaan_kartu_header h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text_dark);
+}
+
+.kerajaan_content p {
+    color: var(--text_light);
+}
+
+.footer {
+    background-color: rgba(220, 173, 92, 0.664);
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7rem;
+    max-width: var(--max_width);
+    margin: auto;
+}
+
+.footer_col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text_dark);
+}
+
+.footer_col p {
+    margin-bottom: 1rem;
+    color: var(--text_light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer_col p:hover {
+    color: var(--text_dark);
+}
+
+.footer_bar {
+    position: relative;
+    max-width: var(--max_width);
+    margin: auto;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary_color_dark);
+    text-align: center;
+    overflow: hidden;
+}
